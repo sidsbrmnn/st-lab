@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(int agrc, char const **argv) {
+int main(int agrc, char const *argv[]) {
     int locks, stocks, barrels;
     printf("Enter number of locks, stocks and barrels: ");
     scanf("%d%d%d", &locks, &stocks, &barrels);

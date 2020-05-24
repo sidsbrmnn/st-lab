@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(int argc, char const **argv) {
+int main(int argc, char const *argv[]) {
     int a, b, c;
     printf("Enter sides of triangle: ");
     scanf("%d%d%d", &a, &b, &c);
