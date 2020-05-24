@@ -5,16 +5,20 @@ int main(int agrc, char const **argv) {
     printf("Enter number of locks, stocks and barrels: ");
     scanf("%d%d%d", &locks, &stocks, &barrels);
 
+    int flag = 0;
     if (locks <= 0 || locks > 70) {
         printf("Locks is out of range.\n");
-        return 0;
+        flag = 1;
     }
     if (stocks <= 0 || stocks > 80) {
         printf("Stocks is out of range.\n");
-        return 0;
+        flag = 1;
     }
     if (barrels <= 0 || barrels > 70) {
         printf("Barrels is out of range.\n");
+        flag = 1;
+    }
+    if (flag == 1) {
         return 0;
     }
 
