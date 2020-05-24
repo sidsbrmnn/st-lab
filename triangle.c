@@ -6,15 +6,15 @@ int main(int argc, char const **argv) {
     scanf("%d%d%d", &a, &b, &c);
 
     int flag = 0;
-    if (a <= 0 || a > 10) {
+    if (a < 1 || a > 10) {
         printf("a is out of range.\n");
         flag = 1;
     }
-    if (b <= 0 || b > 10) {
+    if (b < 1 || b > 10) {
         printf("b is out of range.\n");
         flag = 1;
     }
-    if (c <= 0 || c > 10) {
+    if (c < 1 || c > 10) {
         printf("c is out of range.\n");
         flag = 1;
     }
