@@ -31,7 +31,7 @@ int main(int agrc, char const *argv[]) {
         commission += 0.15 * (sales - 1000);
     } else {
         commission = 0.1 * 1000;
-        commission = 0.15 * 800;
+        commission += 0.15 * 800;
         commission += 0.2 * (sales - 1800);
     }
 
