@@ -6,15 +6,15 @@ int main(int argc, char const *argv[]) {
     printf("Enter number of elements: ");
     scanf("%d", &n);
     if (n < 1) {
-        printf("Not enough elements.\n");
-        return 0;
+        printf("Not enough elements\n");
+        return 1;
     }
 
     int *arr;
     arr = (int *)malloc(sizeof(int) * n);
     if (arr == NULL) {
-        printf("Memory cannot be allocated at the moment.\n");
-        return 0;
+        printf("Memory cannot be allocated at the moment\n");
+        return 1;
     }
 
     printf("Enter elements in ascending order: ");
@@ -40,9 +40,9 @@ int main(int argc, char const *argv[]) {
     }
 
     if (pos > -1) {
-        printf("Element found at position %d.\n", pos + 1);
+        printf("Element found at position %d\n", pos + 1);
     } else {
-        printf("Element not found.\n");
+        printf("Element not found\n");
     }
 
     free(arr);

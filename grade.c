@@ -17,8 +17,8 @@ int main(int argc, char const *argv[]) {
     if (english > 100 || english < 0 || kannada < 0 || kannada > 100 ||
         maths < 0 || maths > 100 || science < 0 || science > 100 ||
         social_science < 0 || social_science > 100) {
-        printf("Invalid input.\n");
-        return 0;
+        printf("Invalid input\n");
+        return 1;
     }
 
     float average =

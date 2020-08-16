@@ -19,7 +19,7 @@ int main(int agrc, char const *argv[]) {
         flag = 1;
     }
     if (flag == 1) {
-        return 0;
+        return 1;
     }
 
     int sales = (locks * 45) + (stocks * 30) + (barrels * 25);

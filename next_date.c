@@ -1,14 +1,15 @@
+#include <stdbool.h>
 #include <stdio.h>
 
-int is_leap_year(int const year) {
+bool is_leap_year(int const year) {
     if (year % 4 == 0) {
         if (year % 100 == 0 && year % 400 != 0) {
-            return 0;
+            return true;
         } else {
-            return 1;
+            return false;
         }
     } else {
-        return 1;
+        return false;
     }
 }
 
@@ -21,7 +22,7 @@ int main(int argc, char const *argv[]) {
 
     int flag = 0;
     if (year < 1812 || year > 2012) {
-        printf("Invalid year.\n");
+        printf("Invalid year\n");
         flag = 1;
     }
     int days = month_days[month - 1];
@@ -34,10 +35,10 @@ int main(int argc, char const *argv[]) {
         flag = 1;
     }
     if (flag == 1) {
-        return 0;
+        return 1;
     }
 
-    if (month == 2 && is_leap_year(year) == 1) {
+    if (month == 2 && is_leap_year(year) == true) {
         days = 29;
     }
 
