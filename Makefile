@@ -1,8 +1,10 @@
 # Use gcc if you're on Linux or Windows
 ifeq ($(OS), Windows_NT)
 	CC = gcc
+	RM = del /q /f
 else
 	UNAME := $(shell uname -s)
+	RM = rm -rf
 	ifeq ($(UNAME), Linux)
 		CC = gcc
 	endif
@@ -18,4 +20,4 @@ CFLAGS = -g -Wall
 	$(CC) $(CFLAGS) -o $@.out $^
 
 clean:
-	rm *.out
+	$(RM) *.out *.dSYM
