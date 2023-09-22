@@ -9,3 +9,5 @@ all: $(BIN)
 clean:
 	rm -f $(BIN)
 	rm -rf *.dSYM
+
+.PHONY: all clean
