@@ -1,23 +1,11 @@
-# Use gcc if you're on Linux or Windows
-ifeq ($(OS), Windows_NT)
-	CC = gcc
-	RM = del /q /f
-else
-	UNAME := $(shell uname -s)
-	RM = rm -rf
-	ifeq ($(UNAME), Linux)
-		CC = gcc
-	endif
-	ifeq ($(UNAME), Darwin)
-		CC = clang
-	endif
-endif
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99 -g
+CPPFLAGS = -I.
 
-# Enable all warnings while compilation
-CFLAGS = -g -Wall
+BIN = $(patsubst %.c, %, $(wildcard *.c))
 
-%: %.c
-	$(CC) $(CFLAGS) -o $@.out $^
+all: $(BIN)
 
 clean:
-	$(RM) *.out *.dSYM
+	rm -f $(BIN)
+	rm -rf *.dSYM
