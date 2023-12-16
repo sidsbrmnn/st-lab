@@ -3,5 +3,3 @@
 BasedOnStyle: LLVM
 IndentWidth: 4
 ---
-Language: Cpp
----
