@@ -1,13 +1,11 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99 -g
-CPPFLAGS = -I.
+CFLAGS = -O2 -pipe -Wall -pedantic -std=c99
 
-BIN = $(patsubst %.c, %, $(wildcard *.c))
+BIN = $(patsubst %.c,%,$(wildcard *.c))
 
 all: $(BIN)
 
 clean:
-	rm -f $(BIN)
-	rm -rf *.dSYM
+	$(RM) $(BIN)
 
 .PHONY: all clean
